@@ -1,0 +1,32 @@
+# Requisitos principales
+numpy>=1.21.0,<2           # Manipulación de arrays numéricos (compatible con OpenCV)
+opencv-python==4.8.0.74    # OpenCV: procesamiento de imágenes
+matplotlib>=3.4.0          # Visualización de imágenes y gráficos
+ 
+# Jupyter Notebook para análisis y documentación
+notebook>=6.4.0            # Soporte para Jupyter Notebook
+ 
+# Requisitos para pruebas
+pytest>=7.0.0              # Framework para pruebas
+pytest-mock>=3.10.0        # Soporte para mocks en pytest
+unittest-xml-reporting>=3.0.0 # Soporte adicional para unittest (opcional)
+ 
+# Requisitos para desarrollo
+requests>=2.25.0           # Para realizar solicitudes HTTP (GitHub, API)
+ 
+# Requisitos para exportar a otros formatos
+jupytext>=1.14.5           # Conversión de Jupyter Notebooks a texto plano
+ 
+# OpenAI y procesamiento de tokens
+openai==0.28               # Cliente de OpenAI
+python-dotenv>=0.19.0      # Manejo de variables de entorno
+tiktoken==0.8.0            # Cálculo de tokens para prompts en OpenAI
+ 
+# Google Drive API y autenticación
+google-api-python-client>=2.70.0  # Cliente para la API de Google Drive
+google-auth>=2.15.0               # Manejo de autenticación con Google
+google-auth-oauthlib>=0.5.3       # Autenticación OAuth 2.0
+google-auth-httplib2>=0.1.0       # Soporte de transporte HTTP para Google Auth
+ 
+ 
+ipywidgets>=7.6.3          # Widgets interactivos en Jupyter Notebook
