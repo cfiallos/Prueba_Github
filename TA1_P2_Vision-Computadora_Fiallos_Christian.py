@@ -174,5 +174,5 @@ if __name__ == "__main__":
 #En conclusión cada uno de los detectores cómo Harris corner, FAST y SIFT, resultan ser herramientas fundamentales para realizar el procesamiento de video, 
 #cada uno tiene sus propias ventajas y desventajas, cada uno resulta ser útil en diferentes escenarios, 
 #por esta razón se recomienda utilizar cada uno en donde corresponda. Por ejemplo, el Harris Corner tiende a ser muy efectivo para detectar esquinas y se utiliza mayormente en imagenes,
-#el FAST al ser rapido y eficiente resulta ser el más adecuado para las aplicaciones en tiempo real, y por último, 
-# el SIFT es generalmente utilizado para situaciones en las que se necesite robustez ante los cambios de escala y rotación.
+#el FAST al ser rapido y eficiente resulta ser el más adecuado para las aplicaciones en tiempo real, 
+# y por último, el SIFT es generalmente utilizado para situaciones en las que se necesite robustez ante los cambios de escala y rotación.
