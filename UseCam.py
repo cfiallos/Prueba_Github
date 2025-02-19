@@ -1,9 +1,9 @@
 import cv2
 
 #Esta es la función que ayuda a detectar los puntos mediante el uso de FAST
-def video_points_detect (frame, fast_points_detector):
+def video_points_detect (frame):
     gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    keypoints = fast_points_detector.detect(gray_frame, None)
+    keypoints = fast_detector.detect(gray_frame, None)
     fast_detector_video_points = cv2.drawKeypoints(frame, keypoints, None, color=(255, 0, 0))
     return fast_detector_video_points
 
@@ -25,8 +25,6 @@ def main():
     out = None  # Inicializar el objeto de grabación de video
     recording = False  # Estado de grabación
 
-    fast_detector = cv2.FastFeatureDetector.create()
-
     print("Presiona 'c' para capturar una foto.")
     print("Presiona 'r' para empezar a grabar un video.")
     print("Presiona 's' para detener la grabación.")
@@ -35,7 +33,7 @@ def main():
     while True:
         ret, frame = cap.read()
         
-        frames_with_fast_detector = video_points_detect(frame, fast_detector)
+        frames_with_fast_detector = video_points_detect(frame)
         cv2.imshow('Camera Feed', frames_with_fast_detector)
 
         if not ret:
@@ -43,7 +41,7 @@ def main():
             break
 
         # Mostrar el feed de la cámara
-        cv2.imshow('Camera Feed', frame)
+        # cv2.imshow('Camera Feed', frame)
 
         # Si estamos grabando, guardar los frames
         if recording:
@@ -80,5 +78,9 @@ def main():
     cap.release()
     cv2.destroyAllWindows()
 
+
+fast_detector = None
+
 if __name__ == "__main__":
+    fast_detector = cv2.FastFeatureDetector.create()
     main()
